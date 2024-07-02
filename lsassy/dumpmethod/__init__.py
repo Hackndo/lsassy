@@ -289,6 +289,8 @@ class IDumpMethod:
                     first_execution = False
                     lsassy_logger.debug("Transformed command: {}".format(exec_command))
                     res = exec_method.exec(exec_command)
+                    lsassy_logger.debug("Cleaning up connection")
+                    exec_method.clean()
                     self.executor_clean()
                 self.clean()
             except Exception:

@@ -22,3 +22,9 @@ class IExec:
             lsassy_logger.error("Module {} does not support Kerberos authentication".format(self.__module__))
             return False
         return True
+
+    def clean(self):
+        """
+        To be implemented in all exec modules
+        """
+        pass
